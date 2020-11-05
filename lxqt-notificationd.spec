@@ -5,11 +5,11 @@
 # Source0 file verified with key 0xBE793007AD22DF7E (tsujan2000@gmail.com)
 #
 Name     : lxqt-notificationd
-Version  : 0.15.0
-Release  : 5
-URL      : https://github.com/lxqt/lxqt-notificationd/releases/download/0.15.0/lxqt-notificationd-0.15.0.tar.xz
-Source0  : https://github.com/lxqt/lxqt-notificationd/releases/download/0.15.0/lxqt-notificationd-0.15.0.tar.xz
-Source1  : https://github.com/lxqt/lxqt-notificationd/releases/download/0.15.0/lxqt-notificationd-0.15.0.tar.xz.asc
+Version  : 0.16.0
+Release  : 6
+URL      : https://github.com/lxqt/lxqt-notificationd/releases/download/0.16.0/lxqt-notificationd-0.16.0.tar.xz
+Source0  : https://github.com/lxqt/lxqt-notificationd/releases/download/0.16.0/lxqt-notificationd-0.16.0.tar.xz
+Source1  : https://github.com/lxqt/lxqt-notificationd/releases/download/0.16.0/lxqt-notificationd-0.16.0.tar.xz.asc
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : LGPL-2.1
@@ -19,6 +19,7 @@ Requires: lxqt-notificationd-license = %{version}-%{release}
 BuildRequires : buildreq-cmake
 BuildRequires : buildreq-kde
 BuildRequires : kwindowsystem-dev
+BuildRequires : liblxqt-data
 BuildRequires : liblxqt-dev
 BuildRequires : lxqt-build-tools
 BuildRequires : qtbase-dev
@@ -57,15 +58,15 @@ license components for the lxqt-notificationd package.
 
 
 %prep
-%setup -q -n lxqt-notificationd-0.15.0
-cd %{_builddir}/lxqt-notificationd-0.15.0
+%setup -q -n lxqt-notificationd-0.16.0
+cd %{_builddir}/lxqt-notificationd-0.16.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1598907075
+export SOURCE_DATE_EPOCH=1604541833
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -78,10 +79,10 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1598907075
+export SOURCE_DATE_EPOCH=1604541833
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/lxqt-notificationd
-cp %{_builddir}/lxqt-notificationd-0.15.0/LICENSE %{buildroot}/usr/share/package-licenses/lxqt-notificationd/7fab4cd4eb7f499d60fe183607f046484acd6e2d
+cp %{_builddir}/lxqt-notificationd-0.16.0/LICENSE %{buildroot}/usr/share/package-licenses/lxqt-notificationd/7fab4cd4eb7f499d60fe183607f046484acd6e2d
 pushd clr-build
 %make_install
 popd
@@ -141,6 +142,7 @@ popd
 /usr/share/lxqt/translations/lxqt-notificationd/lxqt-notificationd_fr.qm
 /usr/share/lxqt/translations/lxqt-notificationd/lxqt-notificationd_gl.qm
 /usr/share/lxqt/translations/lxqt-notificationd/lxqt-notificationd_he.qm
+/usr/share/lxqt/translations/lxqt-notificationd/lxqt-notificationd_hr.qm
 /usr/share/lxqt/translations/lxqt-notificationd/lxqt-notificationd_hu.qm
 /usr/share/lxqt/translations/lxqt-notificationd/lxqt-notificationd_id.qm
 /usr/share/lxqt/translations/lxqt-notificationd/lxqt-notificationd_it.qm
@@ -153,7 +155,6 @@ popd
 /usr/share/lxqt/translations/lxqt-notificationd/lxqt-notificationd_pt.qm
 /usr/share/lxqt/translations/lxqt-notificationd/lxqt-notificationd_pt_BR.qm
 /usr/share/lxqt/translations/lxqt-notificationd/lxqt-notificationd_ru.qm
-/usr/share/lxqt/translations/lxqt-notificationd/lxqt-notificationd_ru_RU.qm
 /usr/share/lxqt/translations/lxqt-notificationd/lxqt-notificationd_sk_SK.qm
 /usr/share/lxqt/translations/lxqt-notificationd/lxqt-notificationd_sv.qm
 /usr/share/lxqt/translations/lxqt-notificationd/lxqt-notificationd_tr.qm
