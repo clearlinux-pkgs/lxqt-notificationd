@@ -6,7 +6,7 @@
 #
 Name     : lxqt-notificationd
 Version  : 1.0.0
-Release  : 8
+Release  : 9
 URL      : https://github.com/lxqt/lxqt-notificationd/releases/download/1.0.0/lxqt-notificationd-1.0.0.tar.xz
 Source0  : https://github.com/lxqt/lxqt-notificationd/releases/download/1.0.0/lxqt-notificationd-1.0.0.tar.xz
 Source1  : https://github.com/lxqt/lxqt-notificationd/releases/download/1.0.0/lxqt-notificationd-1.0.0.tar.xz.asc
