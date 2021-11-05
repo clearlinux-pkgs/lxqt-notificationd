@@ -5,11 +5,11 @@
 # Source0 file verified with key 0xBE793007AD22DF7E (tsujan2000@gmail.com)
 #
 Name     : lxqt-notificationd
-Version  : 0.17.0
-Release  : 7
-URL      : https://github.com/lxqt/lxqt-notificationd/releases/download/0.17.0/lxqt-notificationd-0.17.0.tar.xz
-Source0  : https://github.com/lxqt/lxqt-notificationd/releases/download/0.17.0/lxqt-notificationd-0.17.0.tar.xz
-Source1  : https://github.com/lxqt/lxqt-notificationd/releases/download/0.17.0/lxqt-notificationd-0.17.0.tar.xz.asc
+Version  : 1.0.0
+Release  : 8
+URL      : https://github.com/lxqt/lxqt-notificationd/releases/download/1.0.0/lxqt-notificationd-1.0.0.tar.xz
+Source0  : https://github.com/lxqt/lxqt-notificationd/releases/download/1.0.0/lxqt-notificationd-1.0.0.tar.xz
+Source1  : https://github.com/lxqt/lxqt-notificationd/releases/download/1.0.0/lxqt-notificationd-1.0.0.tar.xz.asc
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : LGPL-2.1
@@ -57,15 +57,15 @@ license components for the lxqt-notificationd package.
 
 
 %prep
-%setup -q -n lxqt-notificationd-0.17.0
-cd %{_builddir}/lxqt-notificationd-0.17.0
+%setup -q -n lxqt-notificationd-1.0.0
+cd %{_builddir}/lxqt-notificationd-1.0.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1618510812
+export SOURCE_DATE_EPOCH=1636132574
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -78,10 +78,10 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1618510812
+export SOURCE_DATE_EPOCH=1636132574
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/lxqt-notificationd
-cp %{_builddir}/lxqt-notificationd-0.17.0/LICENSE %{buildroot}/usr/share/package-licenses/lxqt-notificationd/7fab4cd4eb7f499d60fe183607f046484acd6e2d
+cp %{_builddir}/lxqt-notificationd-1.0.0/LICENSE %{buildroot}/usr/share/package-licenses/lxqt-notificationd/7fab4cd4eb7f499d60fe183607f046484acd6e2d
 pushd clr-build
 %make_install
 popd
@@ -109,6 +109,7 @@ popd
 /usr/share/lxqt/translations/lxqt-config-notificationd/lxqt-config-notificationd_el.qm
 /usr/share/lxqt/translations/lxqt-config-notificationd/lxqt-config-notificationd_en_GB.qm
 /usr/share/lxqt/translations/lxqt-config-notificationd/lxqt-config-notificationd_es.qm
+/usr/share/lxqt/translations/lxqt-config-notificationd/lxqt-config-notificationd_et.qm
 /usr/share/lxqt/translations/lxqt-config-notificationd/lxqt-config-notificationd_fr.qm
 /usr/share/lxqt/translations/lxqt-config-notificationd/lxqt-config-notificationd_gl.qm
 /usr/share/lxqt/translations/lxqt-config-notificationd/lxqt-config-notificationd_he.qm
@@ -117,6 +118,7 @@ popd
 /usr/share/lxqt/translations/lxqt-config-notificationd/lxqt-config-notificationd_id.qm
 /usr/share/lxqt/translations/lxqt-config-notificationd/lxqt-config-notificationd_it.qm
 /usr/share/lxqt/translations/lxqt-config-notificationd/lxqt-config-notificationd_ja.qm
+/usr/share/lxqt/translations/lxqt-config-notificationd/lxqt-config-notificationd_ko.qm
 /usr/share/lxqt/translations/lxqt-config-notificationd/lxqt-config-notificationd_lt.qm
 /usr/share/lxqt/translations/lxqt-config-notificationd/lxqt-config-notificationd_lv.qm
 /usr/share/lxqt/translations/lxqt-config-notificationd/lxqt-config-notificationd_nb_NO.qm
@@ -142,6 +144,7 @@ popd
 /usr/share/lxqt/translations/lxqt-notificationd/lxqt-notificationd_el.qm
 /usr/share/lxqt/translations/lxqt-notificationd/lxqt-notificationd_en_GB.qm
 /usr/share/lxqt/translations/lxqt-notificationd/lxqt-notificationd_es.qm
+/usr/share/lxqt/translations/lxqt-notificationd/lxqt-notificationd_et.qm
 /usr/share/lxqt/translations/lxqt-notificationd/lxqt-notificationd_fr.qm
 /usr/share/lxqt/translations/lxqt-notificationd/lxqt-notificationd_gl.qm
 /usr/share/lxqt/translations/lxqt-notificationd/lxqt-notificationd_he.qm
@@ -150,6 +153,7 @@ popd
 /usr/share/lxqt/translations/lxqt-notificationd/lxqt-notificationd_id.qm
 /usr/share/lxqt/translations/lxqt-notificationd/lxqt-notificationd_it.qm
 /usr/share/lxqt/translations/lxqt-notificationd/lxqt-notificationd_ja.qm
+/usr/share/lxqt/translations/lxqt-notificationd/lxqt-notificationd_ko.qm
 /usr/share/lxqt/translations/lxqt-notificationd/lxqt-notificationd_lt.qm
 /usr/share/lxqt/translations/lxqt-notificationd/lxqt-notificationd_lv.qm
 /usr/share/lxqt/translations/lxqt-notificationd/lxqt-notificationd_nb_NO.qm
@@ -163,6 +167,7 @@ popd
 /usr/share/lxqt/translations/lxqt-notificationd/lxqt-notificationd_sv.qm
 /usr/share/lxqt/translations/lxqt-notificationd/lxqt-notificationd_tr.qm
 /usr/share/lxqt/translations/lxqt-notificationd/lxqt-notificationd_uk.qm
+/usr/share/lxqt/translations/lxqt-notificationd/lxqt-notificationd_vi.qm
 /usr/share/lxqt/translations/lxqt-notificationd/lxqt-notificationd_zh_CN.qm
 /usr/share/lxqt/translations/lxqt-notificationd/lxqt-notificationd_zh_TW.qm
 
