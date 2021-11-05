@@ -6,7 +6,7 @@
 #
 Name     : lxqt-notificationd
 Version  : 1.0.0
-Release  : 9
+Release  : 10
 URL      : https://github.com/lxqt/lxqt-notificationd/releases/download/1.0.0/lxqt-notificationd-1.0.0.tar.xz
 Source0  : https://github.com/lxqt/lxqt-notificationd/releases/download/1.0.0/lxqt-notificationd-1.0.0.tar.xz
 Source1  : https://github.com/lxqt/lxqt-notificationd/releases/download/1.0.0/lxqt-notificationd-1.0.0.tar.xz.asc
@@ -65,7 +65,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1636132574
+export SOURCE_DATE_EPOCH=1636134216
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -78,7 +78,7 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1636132574
+export SOURCE_DATE_EPOCH=1636134216
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/lxqt-notificationd
 cp %{_builddir}/lxqt-notificationd-1.0.0/LICENSE %{buildroot}/usr/share/package-licenses/lxqt-notificationd/7fab4cd4eb7f499d60fe183607f046484acd6e2d
