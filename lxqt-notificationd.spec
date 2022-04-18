@@ -5,11 +5,11 @@
 # Source0 file verified with key 0xBE793007AD22DF7E (tsujan2000@gmail.com)
 #
 Name     : lxqt-notificationd
-Version  : 1.0.0
-Release  : 10
-URL      : https://github.com/lxqt/lxqt-notificationd/releases/download/1.0.0/lxqt-notificationd-1.0.0.tar.xz
-Source0  : https://github.com/lxqt/lxqt-notificationd/releases/download/1.0.0/lxqt-notificationd-1.0.0.tar.xz
-Source1  : https://github.com/lxqt/lxqt-notificationd/releases/download/1.0.0/lxqt-notificationd-1.0.0.tar.xz.asc
+Version  : 1.1.0
+Release  : 11
+URL      : https://github.com/lxqt/lxqt-notificationd/releases/download/1.1.0/lxqt-notificationd-1.1.0.tar.xz
+Source0  : https://github.com/lxqt/lxqt-notificationd/releases/download/1.1.0/lxqt-notificationd-1.1.0.tar.xz
+Source1  : https://github.com/lxqt/lxqt-notificationd/releases/download/1.1.0/lxqt-notificationd-1.1.0.tar.xz.asc
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : LGPL-2.1
@@ -28,7 +28,7 @@ BuildRequires : qttools-dev
 # lxqt-notificationd
 ## Overview
 `lxqt-notificationd` is LXQt's implementation of a daemon according to the
-[Desktop Notifications Specification](https://developer.gnome.org/notification-spec/).
+[Desktop Notifications Specification](https://specifications.freedesktop.org/notification-spec/latest/).
 
 %package bin
 Summary: bin components for the lxqt-notificationd package.
@@ -57,15 +57,15 @@ license components for the lxqt-notificationd package.
 
 
 %prep
-%setup -q -n lxqt-notificationd-1.0.0
-cd %{_builddir}/lxqt-notificationd-1.0.0
+%setup -q -n lxqt-notificationd-1.1.0
+cd %{_builddir}/lxqt-notificationd-1.1.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1636134216
+export SOURCE_DATE_EPOCH=1650311798
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -78,10 +78,10 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1636134216
+export SOURCE_DATE_EPOCH=1650311798
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/lxqt-notificationd
-cp %{_builddir}/lxqt-notificationd-1.0.0/LICENSE %{buildroot}/usr/share/package-licenses/lxqt-notificationd/7fab4cd4eb7f499d60fe183607f046484acd6e2d
+cp %{_builddir}/lxqt-notificationd-1.1.0/LICENSE %{buildroot}/usr/share/package-licenses/lxqt-notificationd/7fab4cd4eb7f499d60fe183607f046484acd6e2d
 pushd clr-build
 %make_install
 popd
@@ -123,6 +123,7 @@ popd
 /usr/share/lxqt/translations/lxqt-config-notificationd/lxqt-config-notificationd_lv.qm
 /usr/share/lxqt/translations/lxqt-config-notificationd/lxqt-config-notificationd_nb_NO.qm
 /usr/share/lxqt/translations/lxqt-config-notificationd/lxqt-config-notificationd_nl.qm
+/usr/share/lxqt/translations/lxqt-config-notificationd/lxqt-config-notificationd_oc.qm
 /usr/share/lxqt/translations/lxqt-config-notificationd/lxqt-config-notificationd_pl.qm
 /usr/share/lxqt/translations/lxqt-config-notificationd/lxqt-config-notificationd_pt.qm
 /usr/share/lxqt/translations/lxqt-config-notificationd/lxqt-config-notificationd_pt_BR.qm
